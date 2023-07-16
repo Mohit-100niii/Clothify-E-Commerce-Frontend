@@ -23,8 +23,9 @@ export const placeOrderAction = createAsyncThunk(
   "order/place-order",
   async (payload, { rejectWithValue, getState, dispatch }) => {
     try {
-      const { orderItems, shippingAddress, totalPrice } = payload;
+      const { orderItems, shippingAddress, totalPricefinal } = payload;
       //token
+      console.log(totalPricefinal);
       const token = getState()?.users?.userAuth?.userInfo?.token;
       const config = {
         headers: {
@@ -37,7 +38,7 @@ export const placeOrderAction = createAsyncThunk(
         {
           orderItems,
           shippingAddress,
-          totalPrice,
+          totalPricefinal,
         },
         config
       );

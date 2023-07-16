@@ -21,7 +21,6 @@ export default function ShoppingCart() {
   let removeOrderItemFromLocalStorageHandler;
   let calculateTotalDiscountedPrice;
   let couponFound;
-  
 
   //dispatch
   const dispatch = useDispatch();
@@ -29,20 +28,18 @@ export default function ShoppingCart() {
     dispatch(getCartItemsFromLocalStorageAction());
   }, [dispatch]);
 
-//coupons state
-const [couponCode, setCouponCode] = useState(null);
-const applyCouponSubmit = (e) => {
-  e.preventDefault();
-  dispatch(fetchCouponAction(couponCode));
-  setCouponCode("");
-};
+  //coupons state
+  const [couponCode, setCouponCode] = useState(null);
+  const applyCouponSubmit = (e) => {
+    e.preventDefault();
+    dispatch(fetchCouponAction(couponCode));
+    setCouponCode("");
+  };
 
- //get coupon  from store
- const { coupon, loading, error, isAdded } = useSelector(
-  (state) => state?.coupons
-);
-
-
+  //get coupon  from store
+  const { coupon, loading, error, isAdded } = useSelector(
+    (state) => state?.coupons
+  );
 
   //get cart items from store
   const { cartItems } = useSelector((state) => state?.carts);
@@ -56,32 +53,27 @@ const applyCouponSubmit = (e) => {
   const changeOrderItemQtyHandler = (productId, qty) => {
     dispatch(changeOrderItemQty({ productId, qty }));
     dispatch(getCartItemsFromLocalStorageAction());
-
   };
 
   //calculate total price
-  //shopping card p order summy m total price ke liye h ye 
+  //shopping card p order summy m total price ke liye h ye
   let sumTotalPrice = 0;
   sumTotalPrice = cartItems?.reduce((acc, current) => {
     return acc + current?.totalPrice;
   }, 0);
-//  console.log(sumTotalPrice);
+   
 
-//check if coupon found
-if (coupon) {
-  sumTotalPrice =
-    sumTotalPrice - (sumTotalPrice * coupon?.coupon?.discount) / 100;
-}
+  //check if coupon found
+  if (coupon) {
+    sumTotalPrice =
+      sumTotalPrice - (sumTotalPrice * coupon?.coupon?.discount) / 100;
+  }
+  console.log(sumTotalPrice);
 
-  //ye product ko page se remove karn eke liye kar rhe h 
+  //ye product ko page se remove karn eke liye kar rhe h
   const removeOrderItemQtyHandler = (productId) => {
     dispatch(removeOrderItemQty(productId));
     dispatch(getCartItemsFromLocalStorageAction());
-
-    
-
-
-
   };
 
   return (
@@ -131,7 +123,7 @@ if (coupon) {
                           </p>
                         </div>
                         <p className="mt-1 text-sm font-medium text-gray-900">
-                          Rs {product?.price} X {product?.qty}=Rs {" "}
+                          Rs {product?.price} X {product?.qty}=Rs{" "}
                           {product?.totalPrice}
                         </p>
                       </div>
@@ -155,15 +147,13 @@ if (coupon) {
                               {x + 1}
                             </option>
                           ))}
-                          
                         </select>
                         {/* remove */}
                         <div className="absolute top-0 right-0">
                           <button
                             onClick={() =>
-                              removeOrderItemQtyHandler(
-                                product?._id
-                              )
+                              // removeOrderItemQtyHandler(product?._id)
+                              removeOrderItemQtyHandler(product?.size)
                             }
                             className="-m-2 inline-flex p-2 text-gray-400 hover:text-gray-500"
                           >
@@ -205,7 +195,7 @@ if (coupon) {
                 <span>Have coupon code? </span>
               </dt>
               {/* errr */}
-              {error && <ErrorMsg message={error?.message}/>}
+              {error && <ErrorMsg message={error?.message} />}
               {/* success */}
               {isAdded && (
                 <SuccessMsg
@@ -242,7 +232,7 @@ if (coupon) {
                   Order total
                 </dt>
                 <dd className=" text-xl font-medium text-gray-900">
-                Rs {sumTotalPrice}.00
+                  Rs {sumTotalPrice}.00
                   {/* {calculateTotalDiscountedPrice().toFixed(2)} */}
                 </dd>
               </div>

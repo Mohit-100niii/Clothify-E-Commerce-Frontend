@@ -399,6 +399,7 @@ export default function Navbar() {
   const { cartItems } = useSelector((state) => state?.carts);
   //get cart items from local storage
   let cartItemsFromLocalStorage;
+  let removecartItemsFromLocalStorage;
   //get login user from localstorage
 
   const user = JSON.parse(localStorage.getItem("userInfo"));
@@ -407,6 +408,7 @@ export default function Navbar() {
   //logout handler
   const logoutHandler = () => {
     dispatch(logoutAction());
+    
     //reload
     // window.location.reload();
     window.location.href="/";

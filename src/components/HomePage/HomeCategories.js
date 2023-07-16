@@ -13,7 +13,7 @@ const HomeCategories = () => {
 //get data from store
 const {categories}=useSelector((state)=>state?.categories);
 
-  const categoriesToShow =categories?.categories?.slice(0,4);
+  const categoriesToShow =categories?.categories?.slice(0,5);
 
   return (
     <>

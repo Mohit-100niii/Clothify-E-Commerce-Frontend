@@ -57,6 +57,18 @@ export const changeOrderItemQty = createAsyncThunk(
   }
 );
 
+// //remove from cart
+// export const removeOrderItemQty = createAsyncThunk(
+//   "cart/removeOrderItem",
+//   async (productId) => {
+//     const cartItems = localStorage.getItem("cartItems")
+//       ? JSON.parse(localStorage.getItem("cartItems"))
+//       : [];
+//     const newItems = cartItems?.filter((item) => item?._id !== productId);
+//     localStorage.setItem("cartItems", JSON.stringify(newItems));
+//   }
+// );
+
 //remove from cart
 export const removeOrderItemQty = createAsyncThunk(
   "cart/removeOrderItem",
@@ -64,10 +76,12 @@ export const removeOrderItemQty = createAsyncThunk(
     const cartItems = localStorage.getItem("cartItems")
       ? JSON.parse(localStorage.getItem("cartItems"))
       : [];
-    const newItems = cartItems?.filter((item) => item?._id !== productId);
+    const newItems = cartItems?.filter((item) => item?.size !== productId);
+    console.log(newItems);
     localStorage.setItem("cartItems", JSON.stringify(newItems));
   }
 );
+
 
 
 

@@ -116,12 +116,31 @@ export default function Product() {
   }, []);
   //get data from store
   const { cartItems } = useSelector((state) => state?.carts);
+  // const productExists = cartItems?.find(
+  //   (item) => item?._id?.toString() === product?._id.toString()
+  // );
   const productExists = cartItems?.find(
-    (item) => item?._id?.toString() === product?._id.toString()
+    // (item) => item?.size === product?.size && item?.color === product?.color
+    (item) => item?.size === selectedSize && item?.color === selectedColor
   );
+  console.log(productExists);
+  useEffect(() => {
+    dispatch(getCartItemsFromLocalStorageAction());
+  }, [dispatch]);
 
+  const user = JSON.parse(localStorage.getItem("userInfo"));
+
+  const isLoggedIn = user?.token ? true : false;
   //Add to cart handler
   const addToCartHandler = () => {
+    if (!isLoggedIn) {
+      return Swal.fire({
+        icon: "error",
+        title: "Oops...!",
+        text: "Please login to add product to cart",
+      });
+    }
+
     //check if product is in cart
     if (productExists) {
       return Swal.fire({
@@ -172,7 +191,7 @@ export default function Product() {
       <main className="mx-auto mt-8 max-w-2xl px-4 pb-16 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8 ">
         <div className="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
           <div className="lg:col-span-5 lg:col-start-8">
-            <div className="flex justify-between">
+            <div className="">
               <h1 className="text-xl font-medium text-gray-900">
                 {product?.name}
               </h1>
@@ -231,16 +250,14 @@ export default function Product() {
             <h2 className="sr-only">Images</h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8 mt-10 ">
-            {/* <div className="grid grid-cols-1 lg:grid-cols-1 lg:grid-rows-5 lg:gap-8"> */}
+              {/* <div className="grid grid-cols-1 lg:grid-cols-1 lg:grid-rows-5 lg:gap-8"> */}
               {product?.images?.map((image) => (
                 <img
                   key={image.id}
                   src={image}
                   alt={image.imageAlt}
                   className={classNames(
-                    image.primary
-                      ? "lg:col-span-4 lg:row-span-4"
-                      : " lg:block",
+                    image.primary ? "lg:col-span-4 lg:row-span-4" : " lg:block",
                     "rounded-lg"
                   )}
                 />
@@ -347,12 +364,13 @@ export default function Product() {
 
             {/* Product details */}
             <div className="mt-10 rounded-lg bg-slate-100 p-10 box-content">
-              <h2 className="text-md font-medium text-gray-900 ">Description</h2>
+              <h2 className="text-md font-medium text-gray-900 ">
+                Description
+              </h2>
               <div className="prose prose-sm mt-4 text-gray-500">
                 {product?.description}
               </div>
             </div>
-
 
             {/* Policies */}
             {/* <section aria-labelledby="policies-heading" className="mt-10">
@@ -384,24 +402,20 @@ export default function Product() {
             </section> */}
           </div>
         </div>
-        </main>
+      </main>
     </div>
   );
 }
 
+{
+  /* Reviews */
+}
+<section aria-labelledby="reviews-heading" className="mt-16 sm:mt-24">
+  <h2 id="reviews-heading" className="text-lg font-medium text-gray-900">
+    {/* Recent reviews */}
+  </h2>
 
-        {/* Reviews */}
-        <section aria-labelledby="reviews-heading" className="mt-16 sm:mt-24">
-        
-          <h2
-            id="reviews-heading"
-            className="text-lg font-medium text-gray-900"
-          >
-            {/* Recent reviews */}
-          </h2>
-          
-
-          {/* <div className="mt-6 space-y-10 divide-y divide-gray-200 border-t border-b border-gray-200 pb-10">
+  {/* <div className="mt-6 space-y-10 divide-y divide-gray-200 border-t border-b border-gray-200 pb-10">
             {product?.reviews.map((review) => (
               <div
                 key={review._id}
@@ -448,5 +462,4 @@ export default function Product() {
               </div>
             ))}
           {/* </div> */}
-        </section>
-      
+</section>;

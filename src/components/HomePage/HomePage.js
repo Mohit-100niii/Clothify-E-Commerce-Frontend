@@ -94,11 +94,11 @@ export default function Example() {
                       New products are added every week. Check back often to see
                     </p>
                     <div className="mt-6">
-                      <a
-                        href="#"
+                      <Link
+                        to="/all-categories"
                         className="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 font-medium text-white hover:bg-indigo-700">
                         Shop Productivity
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
