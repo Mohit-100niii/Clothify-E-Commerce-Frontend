@@ -8,7 +8,8 @@ Fully Responsive React.JS front-end for seamless user experience.
 
 ### View Demo: https://clothify-ecommerce-shopping-aa760f.netlify.app/
 
-##Screenshots
+### ScreenShots
+
 [![Screenshot-2023-10-11-183553.png](https://i.postimg.cc/jS1MhRGh/Screenshot-2023-10-11-183553.png)](https://postimg.cc/HrQ0Y1WJ)
 [![Screenshot-2023-10-11-183801.png](https://i.postimg.cc/GtN45Sr6/Screenshot-2023-10-11-183801.png)](https://postimg.cc/0KY56nzC)
 
