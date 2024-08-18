@@ -1,10 +1,10 @@
 ## Clothify - Ecommerce Web Application
-Developed a comprehensive MERN Stack Ecommerce Web application having functionality like User login and
-Signup, admin dashboard, Payment gateway , and order management system.
-Implemented robust user JWT for login authentication and authorization mechanisms for enhanced security.
-Integrated Stripe payment processing for secure and smooth transactions.
-Fully Responsive React.JS front-end for seamless user experience.
-
+• Develop and implemented a feature-rich MERN Stack E-commerce web application, integrating User authentica-
+tion, Advanced admin dashboard, Payment integration system, and a robust order management system,resulting in a seamless shopping experience for customers.
+• Developed a robust Express API with Mongoose schemas for data modeling, integrated JWT and Stripe
+for seamless payment handling.
+• Utilized React and Redux for building interactive UI components and managing application state.
+• Led the forntend and Backend Development of the project, ensuring efficient data handling and system security
 
 #### View Demo: https://gorgeous-shopping-clothify-f1a8ec.netlify.app/
 
