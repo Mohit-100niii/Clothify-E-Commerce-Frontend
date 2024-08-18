@@ -18,6 +18,10 @@ for seamless payment handling.
 
 ![image](https://github.com/user-attachments/assets/e85882e5-0852-4733-8747-e2cecf091853)
 
+### Discount Coupon Feature
+![image](https://github.com/user-attachments/assets/7fbdf976-89ce-4e56-bf5e-85238236d658)
+
+
 
 
 ## Technologies Used
