@@ -1,17 +1,20 @@
 ## Clothify - Ecommerce Web Application
-• Develop and implemented a feature-rich MERN Stack E-commerce web application, integrating User authentica-
+
+#### Develop and implemented a feature-rich MERN Stack E-commerce web application, integrating User authentica-
 tion, Advanced admin dashboard, Payment integration system, and a robust order management system,resulting in a seamless shopping experience for customers.
-• Developed a robust Express API with Mongoose schemas for data modeling, integrated JWT and Stripe
+#### Developed a robust Express API with Mongoose schemas for data modeling, integrated JWT and Stripe
 for seamless payment handling.
-• Utilized React and Redux for building interactive UI components and managing application state.
-• Led the forntend and Backend Development of the project, ensuring efficient data handling and system security
+#### Utilized React and Redux for building interactive UI components and managing application state.
+#### Led the forntend and Backend Development of the project, ensuring efficient data handling and system security
 
 #### View Demo: https://gorgeous-shopping-clothify-f1a8ec.netlify.app/
 
 ### ScreenShots
 
-[![Screenshot-2023-10-11-183553.png](https://i.postimg.cc/jS1MhRGh/Screenshot-2023-10-11-183553.png)](https://postimg.cc/HrQ0Y1WJ)
-[![Screenshot-2023-10-11-183801.png](https://i.postimg.cc/GtN45Sr6/Screenshot-2023-10-11-183801.png)](https://postimg.cc/0KY56nzC)
+![image](https://github.com/Mohit-100niii/Clothify_E-Commerce-Web_Application/assets/84673402/3b122d06-2ad0-4a26-857f-f3ae66c54772)
+![image](https://github.com/Mohit-100niii/Clothify_E-Commerce-Web_Application/assets/84673402/40b23b72-d259-46f8-9669-00bf0f63fbff)
+![image](https://github.com/Mohit-100niii/Clothify_E-Commerce-Web_Application/assets/84673402/de6c7c48-0bcb-4330-8d21-f833106c4ed2)
+![image](https://github.com/Mohit-100niii/Clothify_E-Commerce-Web_Application/assets/84673402/bce41c76-7b95-4c37-8a07-97c5ff14071e)
 
 
 ## Technologies Used
