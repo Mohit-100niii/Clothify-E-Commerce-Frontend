@@ -17,15 +17,15 @@ for seamless payment handling.
 ![image](https://github.com/Mohit-100niii/Clothify_E-Commerce-Web_Application/assets/84673402/bce41c76-7b95-4c37-8a07-97c5ff14071e)
 
 ### Coupon Discount  Feature
-![image](https://github.com/user-attachments/assets/4383e2d1-c378-4ea3-967c-0a72f042d373)
+![image](https://github.com/user-attachments/assets/e85882e5-0852-4733-8747-e2cecf091853)
 
 
 
 ## Technologies Used
-- React.JS
-- Redux
-- Taiwind CSS
-- Node.js
+### React.JS
+### Redux
+### Taiwind CSS
+### Node.js
 - Express.js
 - Mongodb
 - JWT Tokens
