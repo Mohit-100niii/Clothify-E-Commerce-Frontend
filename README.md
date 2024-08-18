@@ -22,13 +22,13 @@ for seamless payment handling.
 
 
 ## Technologies Used
-### React.JS
-### Redux
-### Taiwind CSS
-### Node.js
-- Express.js
-- Mongodb
-- JWT Tokens
+-React.JS
+-Redux
+-Taiwind CSS
+-Node.js
+-Express.js
+-Mongodb
+-JWT Tokens
 
 - ## Contributing
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
