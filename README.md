@@ -16,6 +16,10 @@ for seamless payment handling.
 ![image](https://github.com/Mohit-100niii/Clothify_E-Commerce-Web_Application/assets/84673402/de6c7c48-0bcb-4330-8d21-f833106c4ed2)
 ![image](https://github.com/Mohit-100niii/Clothify_E-Commerce-Web_Application/assets/84673402/bce41c76-7b95-4c37-8a07-97c5ff14071e)
 
+### Coupon Discount  Feature
+![image](https://github.com/user-attachments/assets/4383e2d1-c378-4ea3-967c-0a72f042d373)
+
+
 
 ## Technologies Used
 - React.JS
